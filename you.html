@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My One & Only</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fce7f3; /* Light Pink background */
+            color: #4a4a4a;
+        }
+        .section-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #d82b7d; /* A beautiful pink color */
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .image-container {
+            position: relative;
+            padding-bottom: 75%; /* 4:3 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        .image-container img, .image-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover .image-container img, .card:hover .image-container video {
+            transform: scale(1.05);
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #d82b7d;
+        }
+        .heart-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 100;
+        }
+        .heart {
+            position: absolute;
+            font-size: 1.5rem;
+            color: #ff69b4;
+            animation: rise 3s linear infinite;
+        }
+        @keyframes rise {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="leading-relaxed">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-lg sticky top-0 z-50 rounded-b-3xl">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-3xl font-bold text-pink-600">My One & Only</h1>
+            <nav class="mt-4 md:mt-0">
+                <ul class="flex space-x-6 md:space-x-10 text-gray-600 font-semibold">
+                    <li><a href="#hot" class="nav-link">Hot Section</a></li>
+                    <li><a href="#together" class="nav-link">Together</a></li>
+                    <li><a href="#secret" class="nav-link">Our Secret</a></li>
+                    <li><a href="#love" class="nav-link">Love & Care</a></li>
+                    <li><a href="#beauty" class="nav-link">Beauty</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 md:py-32 bg-pink-100 rounded-3xl mt-10 mx-4 md:mx-auto max-w-7xl flex flex-col items-center text-center">
+        <div class="max-w-3xl px-6">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-pink-600 mb-4">My Dearest Love,</h2>
+            <p class="text-lg md:text-xl text-gray-700">
+                This website is a small token of my immense love for you. It's a collection of moments that capture the essence of who you are to me: my joy, my strength, and my most cherished companion. Every memory with you is a treasure I hold close.
+            </p>
+        </div>
+    </section>
+
+    <!-- Hot Section -->
+    <section id="hot" class="py-20">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="section-title">The "You're My Hottie" Section</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Short and Saari Pic -->
+                <div class="card">
+                    <div class="image-container">
+                        <img src="WhatsApp Image 2025-09-19 at 3.35.46 PM.jpeg" alt="A hot picture in saree.">
+                    </div>
+                </div>
+                <!-- Other Hot Picture -->
+                <div class="card">
+                    <div class="image-container">
+                        <img src="WhatsApp Image 2025-09-19 at 3.35.45 PM.jpeg" alt="A hot picture in shorts.">
+                    </div>
+                </div>
+                <!-- A video showing her hot looks -->
+                <div class="card">
+                    <div class="image-container">
+                        <video controls>
+                            <source src="WhatsApp Video 2025-09-19 at 3.35.45 PM.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Together Section -->
+    <section id="together" class="py-20 bg-pink-50">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="section-title">Together, We're Home</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Together Picture -->
+                <div class="card">
+                    <div class="image-container">
+                        <img src="WhatsApp Image 2025-09-19 at 3.35.47 PM.jpeg" alt="A lovely picture of us together.">
+                    </div>
+                </div>
+                <!-- Video of you -->
+                <div class="card">
+                    <div class="image-container">
+                        <video controls>
+                            <source src="WhatsApp Video 2025-09-19 at 4.00.18 PM.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <!-- Second Together Picture -->
+                 <div class="card">
+                    <div class="image-container">
+                        <img src="WhatsApp Image 2025-09-19 at 3.35.46 PM (1).jpeg" alt="Another picture of us together.">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Secret Section -->
+    <section id="secret" class="py-20">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="section-title">A Mark of Our Love</h2>
+            <div class="flex justify-center">
+                <!-- The hickey video -->
+                <div class="card w-full sm:max-w-md">
+                    <div class="image-container">
+                        <video controls>
+                            <source src="WhatsApp Video 2025-09-19 at 4.00.18 PM (1).mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love & Care Section -->
+    <section id="love" class="py-20 bg-pink-50">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="section-title">Love, Care & Understanding</h2>
+            <div class="grid grid-cols-1 gap-10">
+                <div class="card p-8 flex items-center justify-center">
+                    <p class="text-lg text-gray-700 leading-relaxed italic text-center">
+                     You know me better than anyone, hmesha mujhe support krti ho samjhti ho itna loving feel karati ho socha nhi tha koi mujhse bhi pyr kar skta hai tum mere liye boht special ho halaki kabhi kabhi gussa ata tumpe pr pyr bhi boht ata . i am yoru first boyfriend😍😎 tumhe yaad ham jab 4 saal baad mile the saadi me rat bhag bate krte the hand hold krte the and vo bhi special lgta tha boht tough times aye ham alag bhi hui baat band kri pr still sath a ajate somehow kyuiki it is our destiny it is our love jo ekdusre se door nhi jane deta hame last time jab gao me fir mile sath me beth te the vese tumhe yad nhi hoga pr apan bhr vle room me bethe the light chli gyi thi to yumne mere shoulder pe sar rakh liya tha apan sath bethe the and jab makeup bata rhi thi tumhri waste pkd ke betha tha and tum mujhse chipak ke log aja rhe the tab bhi 😆😆🥰 hamri kiss do baar tumhra mere gaal khichna subha and raat me jab tumhri waist se khel rha tha kyu ki mere rights h... this makes me happy ki tumhre upr mera hak hai and mujhe poochna nhi pdta kisi chiz ke liye and ham ek dusre se boht alag hai fir bhi khus hai sath kyu ki ham rehna chahte hai sath vo neck marks physically comfort jo tumhe mere sath and mujhe tumhre sath we are meant to be together thanks for choosing me
+               </p>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beauty & Cuteness Section -->
+    <section id="beauty" class="py-20">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="section-title">Your Beauty, Inside and Out</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Face Picture -->
+                <div class="card">
+                    <div class="image-container">
+                        <img src="WhatsApp Image 2025-09-19 at 3.55.37 PM.jpeg" alt="A picture showing her beautiful face.">
+                    </div>
+                </div>
+                <!-- Video for cuteness -->
+                <div class="card">
+                    <div class="image-container">
+                        <video controls>
+                            <source src="WhatsApp Video 2025-08-09 at 10.27.40 PM.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                 <!-- Another video for cuteness -->
+                 <div class="card">
+                    <div class="image-container">
+                        <video controls>
+                            <source src="WhatsApp Video 2025-09-19 at 4.00.17 PM.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Section -->
+    <section class="py-20 bg-pink-50 text-center">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-3xl font-bold text-pink-600 mb-6">A Little Something Just for You</h2>
+            <p class="text-lg text-gray-700 mb-8">
+                Click the button below to see a little surprise.
+            </p>
+            <button id="surpriseButton" class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                Click Me!
+            </button>
+        </div>
+    </section>
+    
+    <div id="heart-container" class="heart-container"></div>
+    
+    <!-- Footer -->
+    <footer class="bg-white text-center py-6 mt-10 rounded-t-3xl shadow-lg">
+        <p class="text-gray-600 text-sm">&copy; 2025 Built with all my love.</p>
+    </footer>
+
+    <script>
+        document.getElementById('surpriseButton').addEventListener('click', function() {
+            const container = document.getElementById('heart-container');
+            for (let i = 0; i < 20; i++) {
+                createHeart();
+            }
+            // Change button text after click
+            this.textContent = 'I Love You!';
+            this.disabled = true;
+        });
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+            heart.style.fontSize = Math.random() * 10 + 20 + 'px';
+            document.getElementById('heart-container').appendChild(heart);
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
